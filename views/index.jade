@@ -3,6 +3,22 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  form(action='/test/submit', method='post')
-    input(type='text', name='id')
-    button(type= 'submit') Submit
+    form(action='/submit', method='post')
+      
+      div.input
+        label(for='email') Email
+        input(type='text', name='email')#email
+      
+      div.input
+        label(for='password') Password
+        input(type='password', name='password')#password
+      
+      div.input
+        label(for='confirmPassword') Confirm Password
+        input(type='password', name='confirmPassword')#confirmPassword
+      
+      button(type='submit') Sign Up
+
+  //- form(action='/test/submit', method='post')
+  //-   input(type='text', name='id')
+  //-   button(type='submit') Submit
